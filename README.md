@@ -1,6 +1,6 @@
 <p align="center">
     <picture>
-        <img width="205" alt="Maven AI Logo" src="https://github.com/Mavendotfun/Maven/blob/main/assets/Maven%20AI%20Logo.png">
+        <img width="205" alt="Maven AI Logo" src="[https://github.com/Mavendotfun/Maven/blob/main/assets/Maven%20AI%20Logo.png](https://github.com/Mavendotfun/Maven/blob/main/assets/maven1500x500.png)">
     </picture>
 </p>
 <h3 align="center">
