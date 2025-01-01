@@ -59,11 +59,14 @@ Once you have MAVEN, send some to the address logged from the Maven address comm
 
 ### Overview
 
-#### Nosana Jobs: Each job on the Nosana network is essentially an AI inference task that runs from a Docker container. The jobs are designed to utilize GPU resources efficiently.
+#### Nosana Jobs 
+Each job on the Nosana network is essentially an AI inference task that runs from a Docker container. The jobs are designed to utilize GPU resources efficiently.
 
-#### Nosana Nodes: Jobs run on different Nosana nodes, which are represented as Solana addresses in the Nosana explorer. Each node contributes its GPU resources to execute the jobs.
+#### Nosana Nodes
+Jobs run on different Nosana nodes, which are represented as Solana addresses in the Nosana explorer. Each node contributes its GPU resources to execute the jobs.
 
-#### GPU Markets: Different types of GPUs available in the network are categorized into various markets. Each market supports specific job requirements based on the type of GPU.
+#### GPU Markets
+Different types of GPUs available in the network are categorized into various markets. Each market supports specific job requirements based on the type of GPU.
 
 
                                     
