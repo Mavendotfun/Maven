@@ -1,8 +1,6 @@
-<p align="center">
-    <picture>
-        <img width="205" alt="Maven AI Logo" src="[https://github.com/Mavendotfun/Maven/blob/main/assets/Maven%20AI%20Logo.png](https://github.com/Mavendotfun/Maven/blob/main/assets/maven1500x500.png)">
-    </picture>
-</p>
+<div align="center">
+  <img src="./assets/maven1500x500.jpg" alt="Maven Banner" width="100%" />
+</div>
 <h3 align="center">
     The easiest tool for fine-tuning LLM models, synthetic data generation, and collaborating on datasets.
 </h3>
