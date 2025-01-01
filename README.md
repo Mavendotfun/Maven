@@ -6,7 +6,7 @@
 
 <div align="center">
 
- [Website](https://elizaos.github.io/eliza/)
+ [Website](https://www.mavenai.fun/)
 
 </div>
 
