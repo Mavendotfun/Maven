@@ -67,6 +67,9 @@ Jobs run on different Nosana nodes, which are represented as Solana addresses in
 
 #### GPU Markets
 Different types of GPUs available in the network are categorized into various markets. Each market supports specific job requirements based on the type of GPU.
+<div align="center">
+  <img src="./assets/mavenjobs.png" alt="Maven Jobs" width="100%" />
+</div>
 
 
                                     
