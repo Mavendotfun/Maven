@@ -72,7 +72,10 @@ Different types of GPUs available in the network are categorized into various ma
 </div>
 
 ### Execution Flow
-These steps describe how submitting an inference job to the Nosana network.
+These steps describe how submitting an inference job to the Maven network.
+
+1. Job Submission - A user submits a job defined in a JSON format. This job specifies the tasks to be executed, the Docker images to be used, and whether GPU resources are required.
+------
 
 
 
