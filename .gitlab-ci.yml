@@ -1,0 +1,54 @@
+include:
+  - project: maven-ci/tools/cicd/gitlab-ci
+    file: anchor.yml
+
+#image: backpackapp/build:v0.28.0
+image: projectserum/build:v0.27.0
+
+variables:
+  PREPARE_SCRIPT: scripts/prepare.sh
+
+.parallel:
+  parallel:
+    matrix:
+      - PROGRAM_NAME: maven_staking
+        PROGRAM_ID: nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE
+      - PROGRAM_NAME: maven_rewards
+        PROGRAM_ID: nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp
+      - PROGRAM_NAME: maven_pools
+        PROGRAM_ID: nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD
+      - PROGRAM_NAME: maven_nodes
+        PROGRAM_ID: nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD
+      - PROGRAM_NAME: maven_jobs
+        PROGRAM_ID: nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM
+        SKIP_DEV: "yes"
+      - PROGRAM_NAME: maven_jobs
+        PROGRAM_ID: nosJTmGQxvwXy23vng5UjkTbfv91Bzf9jEuro78dAGR
+        SKIP_MAIN: "yes"
+
+npm:
+  stage: .pre
+  parallel:
+    matrix:
+      - SCRIPT: [ eslint, prettier ]
+  script:
+    - npm ci
+    - npm run $SCRIPT
+  rules:
+    - if: $CI_MERGE_REQUEST_ID || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+scenario:
+  extends: .wallet
+  stage: test
+  parallel:
+    matrix:
+      - TEST_SCENARIO: [ all, claim-transfer, jobs, pools, rewards, staking, nodes ]
+  script:
+    - npm ci
+    - anchor test --skip-build
+  rules:
+    - if: $CI_MERGE_REQUEST_ID || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  cache:
+    key: target-build-devnet
+    paths:
+      - target/
