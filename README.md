@@ -123,7 +123,142 @@ These steps describe how submitting an inference job to the Maven network.
   ]
 }
 ```
+### Job JSON schema
+Here you will be able to see the full JSON schema specification for a Nosana Job.
+```
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "JobType": {
+      "type": "string",
+      "enum": ["container"]
+    },
+    "OperationType": {
+      "type": "string",
+      "enum": ["container/run", "container/create-volume"]
+    },
+    "OperationArgsMap": {
+      "type": "object",
+      "properties": {
+        "container/run": {
+          "type": "object",
+          "properties": {
+            "image": { "type": "string" },
+            "cmd": {
+              "oneOf": [
+                { "type": "string" },
+                {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              ]
+            },
+            "volumes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "dest": { "type": "string" }
+                },
+                "required": ["name", "dest"]
+              }
+            },
+            "expose": { "type": "number" },
+            "gpu": { "type": "boolean" },
+            "work_dir": { "type": "string" },
+            "output": { "type": "string" },
+            "entrypoint": {
+              "oneOf": [
+                { "type": "string" },
+                {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              ]
+            },
+            "env": {
+              "type": "object",
+              "additionalProperties": { "type": "string" }
+            },
+            "resources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string" },
+                  "url": { "type": "string" }
+                  "target": { "type": "string" }
+                },
+                "required": ["type", "url", "target"]
+              }
+            },
+          },
+          "required": ["image", "cmd"]
+        },
+        "container/create-volume": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" }
+          },
+          "required": ["name"]
+        }
+      }
+    },
+    "OperationResults": {
+      "type": "object"
+    },
+    "Operation": {
+      "type": "object",
+      "properties": {
+        "type": { "$ref": "#/definitions/OperationType" },
+        "id": { "type": "string" },
+        "args": { "type": "object" },
+        "results": { "$ref": "#/definitions/OperationResults" }
+      },
+      "required": ["type", "id", "args"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "version": { "type": "string" },
+    "type": { "$ref": "#/definitions/JobType" },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "trigger": { "type": "string" }
+      }
+    },
+    "global": {
+      "type": "object",
+      "properties": {
+        "image": { "type": "string" },
+        "gpu": { "type": "boolean" },
+        "entrypoint": {
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          ]
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "work_dir": { "type": "string" }
+      }
+    },
+    "ops": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Operation" }
+    }
+  },
+  "required": ["version", "type", "ops"]
+}
 
+```
 
 
 
