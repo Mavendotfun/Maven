@@ -110,13 +110,13 @@ These steps describe how submitting an inference job to the Maven network.
       "args": {
         "cmd": [
           "sh -c ",
-          "wget -q https://nosana.mypinata.cloud/ipfs/QmPKP7hjBd1Yyt6CmVpggNCgn9x5oXD1ok27HQvmPiFyew -O audio.mp3;",
+          "wget -q https://maven.mypinata.cloud/ipfs/QmPKP7hjBd1Yyt6CmVpggNCgn9x5oXD1ok27HQvmPiFyew -O audio.mp3;",
           "python openai-whisper.py -p audio.mp3;",
-          "wget -q https://nosana.mypinata.cloud/ipfs/QmUFXcvn3KZNvQmND9SCtDnzsU4NzL6awwYTiCkTkdFNTd -O audio.mp3;",
+          "wget -q https://maven.mypinata.cloud/ipfs/QmUFXcvn3KZNvQmND9SCtDnzsU4NzL6awwYTiCkTkdFNTd -O audio.mp3;",
           "python openai-whisper.py -p audio.mp3;",
           // additional commands omitted for brevity
         ],
-        "image": "docker.io/nosana/whisper:cuda-check",
+        "image": "docker.io/maven/whisper:cuda-check",
         "gpu": true
       }
     }
