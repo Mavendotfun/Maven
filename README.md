@@ -71,6 +71,11 @@ Different types of GPUs available in the network are categorized into various ma
   <img src="./assets/mavenjobs.png" alt="Maven Jobs" width="100%" />
 </div>
 
+### Execution Flow
+These steps describe how submitting an inference job to the Nosana network.
+
+
+
 
                                     
 
