@@ -34,6 +34,7 @@ To install the Maven CLI globally, use the following command:
 ``
 npm install -g @maven/cli
 ```
+g
 ```
 maven --version
 ```
