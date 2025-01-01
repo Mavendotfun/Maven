@@ -27,22 +27,26 @@ Maven is tackling the GPU shortage in the market, providing everyone with easy a
  
 Maven is a platform for running AI inference workloadsopen in new window. Currently, the best way to run inference on the Maven network is through our CLI. We'll start with a simple hello world program and afterwards build on these concepts to create a fully working endpoint.
 
-Installing The Maven CLI
+## Installing The Maven CLI
 
 To install the Maven CLI globally, use the following command:
 
 ```
 npm install -g @maven/cli
 ```
+Verify the installation by running:
+```
 maven --version
 ```
-
+```
   __  __     __      ________ _   _ 
  |  \/  |   /\ \    / /  ____| \ | |
  | \  / |  /  \ \  / /| |__  |  \| |
  | |\/| | / /\ \ \/ / |  __| | . ` |
  | |  | |/ ____ \  /  | |____| |\  |
  |_|  |_/_/    \_\/   |______|_| \_|
+1.0.0
+```
                                     
                                     
 
