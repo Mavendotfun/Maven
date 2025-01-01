@@ -49,7 +49,7 @@ maven --version
 1.0.0
 ```
 ## Your Maven Wallet
-When you first run the Nosana CLI, a new keypair is generated for you in ~/.maven/.maven_key.json, creating a new wallet. In order to run Maven jobs, you need to have some MAVEN in this wallet. You can purchase MAVEN on Raydium or swap in your Solana wallet.
+When you first run the Maven CLI, a new keypair is generated for you in ~/.maven/.maven_key.json, creating a new wallet. In order to run Maven jobs, you need to have some MAVEN in this wallet. You can purchase MAVEN on Raydium or swap in your Solana wallet.
 
 Next, run Maven address, and the terminal will print out your address (the public key). If you need access to your private keys, they can be found in the local folder on your machine. However, for security reasons, we strongly advise against replacing this file.
 
@@ -59,11 +59,11 @@ Once you have MAVEN, send some to the address logged from the Maven address comm
 
 ### Overview
 
-#### Nosana Jobs 
-Each job on the Nosana network is essentially an AI inference task that runs from a Docker container. The jobs are designed to utilize GPU resources efficiently.
+#### Maven Jobs 
+Each job on the Maven network is essentially an AI inference task that runs from a Docker container. The jobs are designed to utilize GPU resources efficiently.
 
-#### Nosana Nodes
-Jobs run on different Nosana nodes, which are represented as Solana addresses in the Nosana explorer. Each node contributes its GPU resources to execute the jobs.
+#### Maven Nodes
+Jobs run on different Maven nodes, which are represented as Solana addresses in the Maven explorer. Each node contributes its GPU resources to execute the jobs.
 
 #### GPU Markets
 Different types of GPUs available in the network are categorized into various markets. Each market supports specific job requirements based on the type of GPU.
