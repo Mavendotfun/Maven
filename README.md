@@ -45,9 +45,19 @@ maven --version
  | |\/| | / /\ \ \/ / |  __| | . ` |
  | |  | |/ ____ \  /  | |____| |\  |
  |_|  |_/_/    \_\/   |______|_| \_|
+
 1.0.0
 ```
-                                    
+## Your Maven Wallet
+When you first run the Nosana CLI, a new keypair is generated for you in ~/.maven/.maven_key.json, creating a new wallet. In order to run Maven jobs, you need to have some MAVEN in this wallet. You can purchase MAVEN on Raydium or swap in your Solana wallet.
+
+Next, run Maven address, and the terminal will print out your address (the public key). If you need access to your private keys, they can be found in the local folder on your machine. However, for security reasons, we strongly advise against replacing this file.
+
+Once you have MAVEN, send some to the address logged from the Maven address command. Now you're ready to start running jobs on the Maven network!
+
+## First Maven Job
+
+
                                     
 
 
