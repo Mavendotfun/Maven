@@ -1,0 +1,23 @@
+[package]
+name = "nosana-rewards"
+version = "0.1.0"
+description = "Reflection rewards for Nosana"
+edition = "2021"
+homepage = "https://nosana.io/"
+authors = ["nosana"]
+license = "MIT"
+keywords = ["solana", "nosana", "cicd", "rewards", "anchor"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nosana_rewards"
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+nosana-staking = { path = "../nosana-staking", features = ["cpi"] }
+nosana-common = { path = "../../common" }

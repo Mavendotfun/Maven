@@ -1,0 +1,25 @@
+[package]
+name = "nosana-jobs"
+version = "0.1.0"
+description = "Nosana Jobs for decentralized CI/CD and computation."
+edition = "2021"
+homepage = "https://nosana.io/"
+authors = ["nosana"]
+license = "MIT"
+keywords = ["solana", "nosana", "cicd", "jobs", "anchor"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nosana_jobs"
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+
+[dependencies]
+anchor-spl = { version = "0.28.0" }
+anchor-lang = { version = "0.28.0" }
+mpl-token-metadata = "5.1.0"
+nosana-staking = { path = "../nosana-staking", features = ["cpi"] }
+nosana-rewards = { path = "../nosana-rewards", features = ["cpi"] }
+nosana-common = { path = "../../common" }

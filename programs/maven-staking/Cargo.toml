@@ -1,0 +1,22 @@
+[package]
+name = "nosana-staking"
+version = "0.1.0"
+description = "Nosana Staking for decentralized CI/CD and computation."
+edition = "2021"
+homepage = "https://nosana.io/"
+authors = ["nosana"]
+license = "MIT"
+keywords = ["solana", "nosana", "cicd", "staking", "anchor"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nosana_staking"
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+nosana-common = { path = "../../common" }
