@@ -33,6 +33,18 @@ To install the Maven CLI globally, use the following command:
 
 ```bash
 npm install -g @maven/cli
+Verify the installation by running:
+```bash
+nosana --version
+```bash
+  __  __     __      ________ _   _ 
+ |  \/  |   /\ \    / /  ____| \ | |
+ | \  / |  /  \ \  / /| |__  |  \| |
+ | |\/| | / /\ \ \/ / |  __| | . ` |
+ | |  | |/ ____ \  /  | |____| |\  |
+ |_|  |_/_/    \_\/   |______|_| \_|
+                                    
+                                    
 
 
 
