@@ -39,7 +39,7 @@ The Maven desktop app is completely free. Available on MacOS, Windows and Linux.
 
 ## Install Python Library
 
-[![PyPI - Version](https://img.shields.io/pypi/v/maven-ai.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/maven-ai/) [![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://maven-ai.github.io/maven/maven_core_docs/index.html)
+[![Docs](https://img.shields.io/badge/docs-pdoc-blue)](https://maven-ai.github.io/maven/maven_core_docs/index.html)
 
 Our open-source [python library](https://pypi.org/project/maven-ai/) allows you to integrate Maven datasets into your own workflows, build fine tunes, use Maven in Notebooks, build custom tools, and much more! [Read the docs](https://maven-ai.github.io/maven/maven_core_docs/index.html).
 
@@ -111,7 +111,7 @@ _Note: We collect anonymous usage metrics via Posthog analytics (never including
 
 ## REST API
 
-[![PyPI - Version](https://img.shields.io/pypi/v/maven-server.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/maven-server/) [![Docs](https://img.shields.io/badge/docs-OpenAPI-blue)](https://maven-ai.github.io/maven/maven_server_openapi_docs/index.html)
+[![Docs](https://img.shields.io/badge/docs-OpenAPI-blue)](https://maven-ai.github.io/maven/maven_server_openapi_docs/index.html)
 
 We offer a self-hostable REST API for Maven based on FastAPI. [Read the docs](https://maven-ai.github.io/maven/maven_server_openapi_docs/index.html).
 
