@@ -75,7 +75,57 @@ Different types of GPUs available in the network are categorized into various ma
 These steps describe how submitting an inference job to the Maven network.
 
 1. Job Submission - A user submits a job defined in a JSON format. This job specifies the tasks to be executed, the Docker images to be used, and whether GPU resources are required.
-------
+2. Node Selection: The job is assigned to a Maven node based on its requirements. The nodes are identified by their Solana addresses.
+3. Job Execution: The selected node pulls the necessary Docker image and executes the commands specified in the job. For example, running AI inference tasks using the provided Python scripts.
+4. Resource Utilization: Nodes utilize their GPU resources to run the tasks. This decentralized approach ensures efficient use of available hardware.
+5. Completion and Rewards: Once the job is completed, the node may earn $MAVEN tokens as a reward for contributing its GPU resources.
+
+### Maven Inference Example
+```
+{
+  "version": "0.1",
+  "type": "container",
+  "meta": {
+    "trigger": "cli"
+  },
+  "ops": [
+    {
+      "type": "container/run",
+      "id": "gpu-stats",
+      "args": {
+        "cmd": [
+          "sh -c ",
+          "nvidia-smi; cat /proc/cpuinfo | grep flags | head -1;"
+        ],
+        "image": "ubuntu",
+        "env": {
+          "DEBUG": "1"
+        },
+        "gpu": true
+      }
+    },
+    {
+      "type": "container/run",
+      "id": "run-whisper",
+      "args": {
+        "cmd": [
+          "sh -c ",
+          "wget -q https://nosana.mypinata.cloud/ipfs/QmPKP7hjBd1Yyt6CmVpggNCgn9x5oXD1ok27HQvmPiFyew -O audio.mp3;",
+          "python openai-whisper.py -p audio.mp3;",
+          "wget -q https://nosana.mypinata.cloud/ipfs/QmUFXcvn3KZNvQmND9SCtDnzsU4NzL6awwYTiCkTkdFNTd -O audio.mp3;",
+          "python openai-whisper.py -p audio.mp3;",
+          // additional commands omitted for brevity
+        ],
+        "image": "docker.io/nosana/whisper:cuda-check",
+        "gpu": true
+      }
+    }
+  ]
+}
+```
+
+
+
 
 
 
