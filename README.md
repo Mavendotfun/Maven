@@ -31,10 +31,8 @@ Installing The Maven CLI
 
 To install the Maven CLI globally, use the following command:
 
-``
-npm install -g @maven/cli
 ```
-g
+npm install -g @maven/cli
 ```
 maven --version
 ```
