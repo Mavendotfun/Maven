@@ -1,6 +1,6 @@
 <p align="center">
     <picture>
-        <img width="205" alt="maven AI Logo" src="https://github.com/user-attachments/assets/5fbcbdf7-1feb-45c9-bd73-99a46dd0a47f">
+        <img width="205" alt="Maven AI Logo" src="https://github.com/user-attachments/assets/5fbcbdf7-1feb-45c9-bd73-99a46dd0a47f">
     </picture>
 </p>
 <h3 align="center">
@@ -37,7 +37,7 @@ In this demo, I create 9 fine-tuned models (including Llama 3.x, Mixtral, and GP
 <img alt="maven Preview" src="https://github.com/user-attachments/assets/51db632b-be98-4fc6-a31c-0ba6fd54dcbb">
 </a>
 
-## Download maven Desktop Apps
+## Download Maven Desktop Apps
 
 The maven desktop app is completely free. Available on MacOS, Windows and Linux.
 
