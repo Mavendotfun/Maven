@@ -124,7 +124,7 @@ These steps describe how submitting an inference job to the Maven network.
 }
 ```
 ### Job JSON schema
-Here you will be able to see the full JSON schema specification for a Nosana Job.
+Here you will be able to see the full JSON schema specification for a Maven Job.
 ```
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -259,6 +259,16 @@ Here you will be able to see the full JSON schema specification for a Nosana Job
 }
 
 ```
+## Contributing & Development
+See CONTRIBUTING.md for information on how to setup a development environment and contribute to Maven.
+
+## Licenses & Trademarks
+- Python Library: MIT License
+- Python REST Server/API: MIT License
+- The Maven names and logos are trademarks of Maven Laboratories Inc.
+- 
+Copyright 2025 - Maven Laboratories Inc.
+
 
 
 
